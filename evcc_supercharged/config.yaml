@@ -1,5 +1,5 @@
 name: evcc Supercharged
-version: "0.316.0-sc7"
+version: "0.316.0-sc8"
 slug: evcc_supercharged
 description: evcc with whole-house load management (ICP never-trip balancing, charging order and supercharge bursts).
 url: https://github.com/felipefc10/evcc/tree/supercharged
