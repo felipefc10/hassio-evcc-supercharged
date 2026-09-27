@@ -1,0 +1,4 @@
+configuration:
+  sqlite_file:
+    name: "Database (sqlite_file)"
+    description: "Location of evcc.db. /config/* is this add-on's folder (addon_configs/<slug>_evcc_supercharged), which is part of the add-on's backup. evcc creates a new database there on first start."

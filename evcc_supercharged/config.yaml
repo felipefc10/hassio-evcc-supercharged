@@ -1,0 +1,42 @@
+name: evcc Supercharged
+version: "0.316.0-sc7"
+slug: evcc_supercharged
+description: evcc with whole-house load management (ICP never-trip balancing, charging order and supercharge bursts).
+url: https://github.com/felipefc10/evcc/tree/supercharged
+image: felipefc10/evcc-supercharged
+arch:
+  - aarch64
+init: false
+startup: application
+boot: auto
+stage: experimental
+host_network: true
+homeassistant_api: true
+ingress: true
+ingress_port: 7070
+panel_icon: mdi:ev-station
+panel_title: evcc
+panel_admin: false
+watchdog: http://[HOST]:[PORT:7070]/
+webui: http://[HOST]:[PORT:7070]/
+map:
+  - type: addon_config
+    read_only: false
+options:
+  sqlite_file: /config/evcc.db
+schema:
+  sqlite_file: str
+ports:
+  4712/tcp: 4712
+  5353/udp: 5353
+  7090/udp: 7090
+  8887/tcp: 8887
+  8899/udp: 8899
+  9522/udp: 9522
+ports_description:
+  4712/tcp: "EEBUS"
+  5353/udp: "Multicast DNS (mDNS)"
+  7090/udp: "Keba"
+  8887/tcp: "OCPP web socket"
+  8899/udp: "Modbus UDP"
+  9522/udp: "SMA Speedwire Multicast"
